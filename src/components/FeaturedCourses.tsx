@@ -2,6 +2,7 @@
 import Link from "next/link";
 import courseData from "../data/music_courses.json";
 import { BackgroundGradient } from "./ui/background-gradient";
+import { Button } from "./ui/moving-border";
 
 interface Course {
   id: number;
@@ -50,11 +51,14 @@ function FeaturedCourses() {
         </div>
       </div>
       <div className="mt-20 text-center">
-        <Link
-          href={"/courses"}
-          className="px-4 py-2 rounded border border-neutral-600 text-neutral-700 bg-white hover:bg-gray-100 transition duration-200"
-        >
-          View All courses
+        <Link href={"/courses"}>
+          {" "}
+          <Button
+            borderRadius="1.75rem"
+            className="bg-white dark:bg-slate-950 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+          >
+            View all courses
+          </Button>
         </Link>
       </div>
     </div>
